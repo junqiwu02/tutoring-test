@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <canvas id="can" width=500 height=500></canvas>
+  <button onclick="drawAll(); solve();">DFS</button>
+  <button onclick="drawAll(); bfs();">BFS</button>
+  <button onclick="drawAll(); smartSolve('bfs');"> New BFS</button>
+  <button onclick="drawAll(); smartSolve('dfs');"> New DFS</button>
+  <button onclick="drawAll(); recursiveDFS();"> Recursive DFS</button>
+  
+  <button onclick="gfx.clear(); maze.generate(MAZE_SIZE, MAZE_SIZE);">Generate</button>
+  <div>
+    <input id="slider" type="range" min="5" max="20" onchange="updateSizes();" />
+    <label>Maze size</label>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
